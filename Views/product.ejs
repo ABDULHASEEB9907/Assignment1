@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+    <%- include('header') %>
+    <h1>Product List</h1>
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <h2><%= product.title %></h2>
+          <p>Price: $<%= product.price %></p>
+          <img src="<%= product.image %>" alt="<%= product.title %>" width="100">
+        </li>
+      <% }) %>
+    </ul>
+    <%- include('footer') %>
+  </body>
+</html>
